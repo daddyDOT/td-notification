@@ -5,6 +5,7 @@
 	"output": "test.amx",
 	"dependencies": [
 		"openmultiplayer/omp-stdlib",
+		"pawn-lang/samp-stdlib@open.mp",
 		"daddyDOT/samp-td-string-width"
 	],
 	"dev_dependencies": [
