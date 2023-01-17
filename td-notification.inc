@@ -1,5 +1,5 @@
 /*
-    td-notification - Version 1.0
+    td-notification - Version 1.1
 
     Modes of use:
     MAX_TDN: set how many TextDraw will be shown in TextDraw's Notification
@@ -21,6 +21,7 @@
     TDN_MODE_DEFAULT: TextDraw notifications will use the default settings
 
     Created by ThePez - NaS
+    Adapted to open.mp - daddyDOT
 */
  
 #if defined include_td_notification
@@ -90,13 +91,13 @@
     #define MAX_TDN 4
     #define TDN_POS_X 497.000000
     #define TDN_POS_Y 130.000000
-    #define TDN_FONT 1
+    #define TDN_FONT TEXT_DRAW_FONT_1
     #define TDN_LETTER_SIZE_X 0.250000
     #define TDN_LETTER_SIZE_Y 1.000000
     #define TDN_SIZE 112.000000
     #define TDN_COLOR 0xFFFFFFFF
     #define TDN_COLOR_BOX 0x000000FF
-    #define TDN_PROPORTIONAL 1
+    #define TDN_PROPORTIONAL true
     #define TDN_DISTANCE 5
     #define TDN_MODE_DOWN
     #define TDN_TIME 20000
@@ -159,50 +160,50 @@ public ShowTDN(playerid, const reason[])
             {
                 switch(reason[pos])
                 {
-                    case '‡': text[pos] = 151;
-                    case '·': text[pos] = 152;
-                    case '‚': text[pos] = 153;
-                    case '‰': text[pos] = 154;
-                    case '¿': text[pos] = 128;
-                    case '¡': text[pos] = 129;
-                    case '¬': text[pos] = 130;
-                    case 'ƒ': text[pos] = 131;
-                    case 'Ë': text[pos] = 157;
-                    case 'È': text[pos] = 158;
-                    case 'Í': text[pos] = 159;
-                    case 'Î': text[pos] = 160;
-                    case '»': text[pos] = 134;
-                    case '…': text[pos] = 135;
-                    case ' ': text[pos] = 136;
-                    case 'À': text[pos] = 137;
-                    case 'Ï': text[pos] = 161;
-                    case 'Ì': text[pos] = 162;
-                    case 'Ó': text[pos] = 163;
-                    case 'Ô': text[pos] = 164;
-                    case 'Ã': text[pos] = 138;
-                    case 'Õ': text[pos] = 139;
-                    case 'Œ': text[pos] = 140;
-                    case 'œ': text[pos] = 141;
-                    case 'Ú': text[pos] = 165;
-                    case 'Û': text[pos] = 166;
-                    case 'Ù': text[pos] = 167;
-                    case 'ˆ': text[pos] = 168;
-                    case '“': text[pos] = 142;
-                    case '”': text[pos] = 143;
-                    case '‘': text[pos] = 144;
-                    case '÷': text[pos] = 145;
-                    case '˘': text[pos] = 169;
-                    case '˙': text[pos] = 170;
-                    case '˚': text[pos] = 171;
-                    case '¸': text[pos] = 172;
-                    case 'Ÿ': text[pos] = 146;
-                    case '⁄': text[pos] = 147;
-                    case '€': text[pos] = 148;
-                    case '‹': text[pos] = 149;
-                    case 'Ò': text[pos] = 174;
-                    case '—': text[pos] = 173;
-                    case '°': text[pos] = 64;
-                    case 'ø': text[pos] = 175;
+                    case '√†': text[pos] = 151;
+                    case '√°': text[pos] = 152;
+                    case '√¢': text[pos] = 153;
+                    case '√§': text[pos] = 154;
+                    case '√Ä': text[pos] = 128;
+                    case '√Å': text[pos] = 129;
+                    case '√Ç': text[pos] = 130;
+                    case '√Ñ': text[pos] = 131;
+                    case '√®': text[pos] = 157;
+                    case '√©': text[pos] = 158;
+                    case '√™': text[pos] = 159;
+                    case '√´': text[pos] = 160;
+                    case '√à': text[pos] = 134;
+                    case '√â': text[pos] = 135;
+                    case '√ä': text[pos] = 136;
+                    case '√ã': text[pos] = 137;
+                    case '√¨': text[pos] = 161;
+                    case '√≠': text[pos] = 162;
+                    case '√Æ': text[pos] = 163;
+                    case '√Ø': text[pos] = 164;
+                    case '√å': text[pos] = 138;
+                    case '√ç': text[pos] = 139;
+                    case '√é': text[pos] = 140;
+                    case '√è': text[pos] = 141;
+                    case '√≤': text[pos] = 165;
+                    case '√≥': text[pos] = 166;
+                    case '√¥': text[pos] = 167;
+                    case '√∂': text[pos] = 168;
+                    case '√í': text[pos] = 142;
+                    case '√ì': text[pos] = 143;
+                    case '√î': text[pos] = 144;
+                    case '√ñ': text[pos] = 145;
+                    case '√π': text[pos] = 169;
+                    case '√∫': text[pos] = 170;
+                    case '√ª': text[pos] = 171;
+                    case '√º': text[pos] = 172;
+                    case '√ô': text[pos] = 146;
+                    case '√ö': text[pos] = 147;
+                    case '√õ': text[pos] = 148;
+                    case '√ú': text[pos] = 149;
+                    case '√±': text[pos] = 174;
+                    case '√ë': text[pos] = 173;
+                    case '¬°': text[pos] = 64;
+                    case '¬ø': text[pos] = 175;
                     case '`': text[pos] = 177;
                     case '&': text[pos] = 38;
                     default:  text[pos] = reason[pos];
@@ -256,50 +257,50 @@ public ShowTDN_Manual(playerid, const reason[])
             {
                 switch(reason[pos])
                 {
-                    case '‡': text[pos] = 151;
-                    case '·': text[pos] = 152;
-                    case '‚': text[pos] = 153;
-                    case '‰': text[pos] = 154;
-                    case '¿': text[pos] = 128;
-                    case '¡': text[pos] = 129;
-                    case '¬': text[pos] = 130;
-                    case 'ƒ': text[pos] = 131;
-                    case 'Ë': text[pos] = 157;
-                    case 'È': text[pos] = 158;
-                    case 'Í': text[pos] = 159;
-                    case 'Î': text[pos] = 160;
-                    case '»': text[pos] = 134;
-                    case '…': text[pos] = 135;
-                    case ' ': text[pos] = 136;
-                    case 'À': text[pos] = 137;
-                    case 'Ï': text[pos] = 161;
-                    case 'Ì': text[pos] = 162;
-                    case 'Ó': text[pos] = 163;
-                    case 'Ô': text[pos] = 164;
-                    case 'Ã': text[pos] = 138;
-                    case 'Õ': text[pos] = 139;
-                    case 'Œ': text[pos] = 140;
-                    case 'œ': text[pos] = 141;
-                    case 'Ú': text[pos] = 165;
-                    case 'Û': text[pos] = 166;
-                    case 'Ù': text[pos] = 167;
-                    case 'ˆ': text[pos] = 168;
-                    case '“': text[pos] = 142;
-                    case '”': text[pos] = 143;
-                    case '‘': text[pos] = 144;
-                    case '÷': text[pos] = 145;
-                    case '˘': text[pos] = 169;
-                    case '˙': text[pos] = 170;
-                    case '˚': text[pos] = 171;
-                    case '¸': text[pos] = 172;
-                    case 'Ÿ': text[pos] = 146;
-                    case '⁄': text[pos] = 147;
-                    case '€': text[pos] = 148;
-                    case '‹': text[pos] = 149;
-                    case 'Ò': text[pos] = 174;
-                    case '—': text[pos] = 173;
-                    case '°': text[pos] = 64;
-                    case 'ø': text[pos] = 175;
+                    case '√†': text[pos] = 151;
+                    case '√°': text[pos] = 152;
+                    case '√¢': text[pos] = 153;
+                    case '√§': text[pos] = 154;
+                    case '√Ä': text[pos] = 128;
+                    case '√Å': text[pos] = 129;
+                    case '√Ç': text[pos] = 130;
+                    case '√Ñ': text[pos] = 131;
+                    case '√®': text[pos] = 157;
+                    case '√©': text[pos] = 158;
+                    case '√™': text[pos] = 159;
+                    case '√´': text[pos] = 160;
+                    case '√à': text[pos] = 134;
+                    case '√â': text[pos] = 135;
+                    case '√ä': text[pos] = 136;
+                    case '√ã': text[pos] = 137;
+                    case '√¨': text[pos] = 161;
+                    case '√≠': text[pos] = 162;
+                    case '√Æ': text[pos] = 163;
+                    case '√Ø': text[pos] = 164;
+                    case '√å': text[pos] = 138;
+                    case '√ç': text[pos] = 139;
+                    case '√é': text[pos] = 140;
+                    case '√è': text[pos] = 141;
+                    case '√≤': text[pos] = 165;
+                    case '√≥': text[pos] = 166;
+                    case '√¥': text[pos] = 167;
+                    case '√∂': text[pos] = 168;
+                    case '√í': text[pos] = 142;
+                    case '√ì': text[pos] = 143;
+                    case '√î': text[pos] = 144;
+                    case '√ñ': text[pos] = 145;
+                    case '√π': text[pos] = 169;
+                    case '√∫': text[pos] = 170;
+                    case '√ª': text[pos] = 171;
+                    case '√º': text[pos] = 172;
+                    case '√ô': text[pos] = 146;
+                    case '√ö': text[pos] = 147;
+                    case '√õ': text[pos] = 148;
+                    case '√ú': text[pos] = 149;
+                    case '√±': text[pos] = 174;
+                    case '√ë': text[pos] = 173;
+                    case '¬°': text[pos] = 64;
+                    case '¬ø': text[pos] = 175;
                     case '`': text[pos] = 177;
                     case '&': text[pos] = 38;
                     default:  text[pos] = reason[pos];
@@ -586,13 +587,13 @@ stock CreateTDN(playerid, TDN)
         PlayerTextDrawTextSize(playerid, TextDrawsNotification[playerid][TDN][TextDraw], floatadd(TDN_POS_X, TDN_SIZE), 1.000000);
         PlayerTextDrawSetOutline(playerid, TextDrawsNotification[playerid][TDN][TextDraw], 1);
         PlayerTextDrawSetShadow(playerid, TextDrawsNotification[playerid][TDN][TextDraw], 0);
-        PlayerTextDrawAlignment(playerid, TextDrawsNotification[playerid][TDN][TextDraw], 1);
-        PlayerTextDrawColor(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TDN_COLOR);
-        PlayerTextDrawBackgroundColor(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TDN_COLOR_BOX);
-        PlayerTextDrawBoxColor(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TDN_COLOR_BOX);
-        PlayerTextDrawUseBox(playerid, TextDrawsNotification[playerid][TDN][TextDraw], 1);
+        PlayerTextDrawAlignment(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TEXT_DRAW_ALIGN_LEFT);
+        PlayerTextDrawColour(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TDN_COLOR);
+        PlayerTextDrawBackgroundColour(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TDN_COLOR_BOX);
+        PlayerTextDrawBoxColour(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TDN_COLOR_BOX);
+        PlayerTextDrawUseBox(playerid, TextDrawsNotification[playerid][TDN][TextDraw], true);
         PlayerTextDrawSetProportional(playerid, TextDrawsNotification[playerid][TDN][TextDraw], TDN_PROPORTIONAL);
-        PlayerTextDrawSetSelectable(playerid, TextDrawsNotification[playerid][TDN][TextDraw], 0);
+        PlayerTextDrawSetSelectable(playerid, TextDrawsNotification[playerid][TDN][TextDraw], false);
         PlayerTextDrawShow(playerid, TextDrawsNotification[playerid][TDN][TextDraw]);
     }
     return 1;
